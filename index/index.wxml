@@ -1,0 +1,53 @@
+<view class="page-body">
+  <view class="page-body-wrapper">
+    <camera wx:if="{{camera_flag}}" device-position="front" flash="off" binderror="error" style="width: 91%; height: 350px;"></camera>
+    <image wx:if="{{!camera_flag}}" mode="widthFix" src="{{src}}" style="width: 91%; height: 350px;"></image>
+    <view class="btn-area">
+      <button wx:if="{{camera_flag}}" type="primary" bindtap="takePhoto">智能推荐</button>
+      <button wx:if="{{!camera_flag}}" type="primary" bindtap="takePhoto">重新检测</button>
+    </view>
+    <!-- <view wx:if="{{!camera_flag}}" class="preview-tips">
+      <!-- <text>年龄：{{age}}；</text>
+      <text>性别：{{gender}}</text> -->
+    <!-- </view> -->
+
+
+    <view wx:if="{{!camera_flag}}" class="table">
+      <view class="tr bg-w">
+        <view class="th">年龄</view>
+        <view class="th">性别</view>
+        <view class="th ">健康状况</view>
+        <view class="th ">皮肤状况</view>
+      </view>
+
+      <view class="tr">
+        <view class="td">{{age}}</view>
+        <view class="td">{{gender}}</view>
+        <view class="td">{{health}}</view>
+        <view class="td">{{skin}}</view>
+      </view>
+    </view>
+
+    <view wx:if="{{!camera_flag}}" class="table">
+      <view class="tr bg-w">
+        <view class="th_2">软件类型</view>
+        <view class="th_2">使用时长</view>
+      </view>
+      <block wx:for="{{listData}}" wx:key="{{code}}">
+        <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+          <view class="td">{{item.code}}</view>
+          <view class="td">{{item.text}}min</view>
+        </view>
+        <view class="tr" wx:else>
+          <view class="td">{{item.code}}</view>
+          <view class="td">{{item.text}}min</view>
+        </view>
+      </block>
+    </view>
+
+    <view wx:if="{{!camera_flag}}" class="table">
+      <text class='title'>使用建议：\n</text>
+      <text class="text" decode="{{true}}">&emsp;&emsp;周{{weekstring}}好，作为{{people}}用户，你现在的健康程度为“{{health}}”，有{{dark}}黑眼圈，{{skin_}}青春痘和色斑，为了你的健康考虑，建议你使用各类软件的时长如上图所示，希望能对你的生活有更好的帮助。</text>
+    </view>
+  </view>
+</view>
