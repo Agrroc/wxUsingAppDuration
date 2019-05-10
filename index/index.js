@@ -8,7 +8,7 @@ Page({
   takePhoto() {
     if (this.data.camera_flag) {
       this.ctx.takePhoto({
-        quality: 'low',
+        quality: 'high',
         success: (res) => {
           this.setData({
             camera_flag: false,
