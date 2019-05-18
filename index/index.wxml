@@ -41,7 +41,7 @@
 
     <view wx:if="{{!camera_flag}}" class="table">
       <text class='title'>使用建议：\n</text>
-      <text class="text" decode="{{true}}">&emsp;&emsp;周{{weekstring}}好，作为{{people}}用户，你现在的健康程度为“{{health}}”，有{{dark}}黑眼圈，{{skin_}}青春痘和色斑，为了你的健康考虑，建议你使用各类软件的时长如上图所示，希望能对你的生活有更好的帮助。</text>
+      <text class="text" decode="{{true}}">&emsp;&emsp;周{{weekstring}}好，作为{{people}}用户，你现在的健康程度为“{{health}}”，有{{dark}}黑眼圈，{{skin_}}青春痘和色斑，为了你的健康考虑，建议你使用各类软件的时长如上图所示，希望能对你的生活有更好的帮助!</text>
     </view>
   </view>
 </view>
