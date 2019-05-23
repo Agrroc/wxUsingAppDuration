@@ -8,12 +8,14 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.93",
+	"libVersion": "2.7.0",
 	"appid": "wx9680ef55845b1b3b",
 	"projectname": "kunpeng_camer",
 	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionRoot": "cloudfunctions/",
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,

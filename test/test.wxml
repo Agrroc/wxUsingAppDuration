@@ -1,0 +1,7 @@
+<!--test/test.wxml-->
+<text>test/test.wxml</text>
+<form report-submit="true" bindsubmit="formSubmit">
+  <view class="btn-area">
+    <button form-type="submit" type="primary">智能推荐</button>
+  </view>
+</form>
